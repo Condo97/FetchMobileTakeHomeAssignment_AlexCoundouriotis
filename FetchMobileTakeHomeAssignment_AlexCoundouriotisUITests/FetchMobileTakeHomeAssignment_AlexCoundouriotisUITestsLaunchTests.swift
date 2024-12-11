@@ -8,7 +8,7 @@
 import XCTest
 
 final class FetchMobileTakeHomeAssignment_AlexCoundouriotisUITestsLaunchTests: XCTestCase {
-
+    
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

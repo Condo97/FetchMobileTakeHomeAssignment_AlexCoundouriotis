@@ -9,12 +9,17 @@ import SwiftUI
 
 @main
 struct FetchMobileTakeHomeAssignment_AlexCoundouriotisApp: App {
-    let persistenceController = PersistenceController.shared
+    
+    init() {
+        UIView.appearance().tintColor = UIColor(Colors.buttonBackground)
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            // Show RecipeView with the full url
+            RecipeView()
+                .environment(\.managedObjectContext, CoreDataClient.mainManagedObjectContext)
         }
     }
+    
 }
